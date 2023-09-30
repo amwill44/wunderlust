@@ -7,40 +7,49 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Language" content="en">
 	<meta name="author" content="Ashley Williams">
-	<title>wunderlust</title>
+	<title>Wunderlust Travel</title>
 
-    <meta property="og:title" content="wunderlust">
+    <meta property="og:title" content="Wunderlust Travel">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://amwill44.github.io/wunderlust/">
-    <meta property="og:image" content="images/majorca-waves.png">
+    <meta property="og:image" content="https://amwill44.github.io/wunderlust/images/majorca-cove.png">
+    <meta property="og:description" content="Let Wunderlust Travel take you to beautiful Majorca this year! Majorca is a beautiful island and offers beauty and fun to its visitors">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://amwill44.github.io/wunderlust/">
-    <meta name="twitter:creator" content="@name">
-    <meta name="twitter:title" content="wunderlust">
+    <meta name="twitter:site" content="@wunderlusttravel">
+    <meta name="twitter:creator" content="@wunderlusttravel">
+    <meta name="twitter:title" content="Wunderlust Travel: Majorca">
     <meta name="twitter:description" content="Wunderlust will help you plan the trip of your dreams. Including how to get there, places to stay, things to do, and places to eat.">
-    <meta name="twitter:image" content="images/majorca-waves.png">
+    <meta name="twitter:image" content="https://amwill44.github.io/wunderlust/images/majorca-cove.png">
 
-	<link href="styles.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <a id="skip" href="#main-content">Skip to Main Content</a>
     <header>
         <img src="images/logo.png" alt="The Wunderlust logo shows blue waves and the outline of two palm trees against an orange sun">
         <h1>Wunderlust Travel</h1>
         <p>Let Wunderlust Travel help you plan the trip of your dreams!</p>
         <nav>
-            Main Navigation
-            <ul>
-                <li><a href="#">Destinations</a></li>
-                <li><a href="#">Inspirations</a></li>
-                <li><a href="#">Special</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
+            <div id="menu-toggle">
+                <h2 class="sr-only">Main Navigation</h2>
+                <input name="toggle" id="toggle" type="checkbox">
+                <label for="toggle">Menu</label>
+                <ul>
+                    <li class="active"><a href="#">Destinations</a></li>
+                    <li><a href="#">Inspirations</a></li>
+                    <li><a href="#">Special</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <article>
             <h2>Majorca</h2>
             <p>Imagine an island with turquoise blue waters, secret coves, soft golden sands, lush green foliage, rugged mountains, picturesque villages and a vibrant capital city. The island and its capital, Palma, are overflowing with character, while its beaches are famous all around the world, making it one of the most sought-after summer destinations.</p>
@@ -48,7 +57,7 @@
             <img src="images/majorca-beach.png" alt="beach cove with trees and cliff faces on both sides">
             <img src="images/majorca-cove.png" alt="Deep blue water leading to the horizon with the island and trees in the foreground">
 
-            <section>
+            <section id="plan">
                 <h2>Plan Your Trip</h2>
 
                 <section>
@@ -66,7 +75,7 @@
                     </a>
                 </section>
 
-                <section>
+                <section id="places">
                     <h3>Places to Stay</h3>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bed" width="150" height="150" viewBox="0 0 24 24" stroke-width="1" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -82,7 +91,7 @@
                     </a>
                 </section>
 
-                <section>
+                <section id="things">
                     <h3>Things to do</h3>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sailboat" width="150" height="150" viewBox="0 0 24 24" stroke-width="1" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -100,7 +109,7 @@
                     </a>
                 </section>
 
-                <section>
+                <section id="where">
                     <h3>Where to Eat</h3>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools-kitchen-2" width="150" height="150" viewBox="0 0 24 24" stroke-width="1" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -116,7 +125,7 @@
                 </section>
             </section>
 
-            <section>
+            <section id="testimonials">
                 <h2>Testimonials</h2>
                 <section>
                     <h3>Miranda Blake</h3>
@@ -144,10 +153,10 @@
                 </section>
             </section>
 
-            <section>
+            <section id="about">
                 <h2>About Your Destination</h2>
 
-                <section>
+                <section id="size">
                     <h3>Size</h3>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ruler-2" width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#a905b6" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -160,7 +169,7 @@
                     <p>Size: 1,405 miles squared</p>
                 </section>
 
-                <section>
+                <section id="elevation">
                     <h3>Elevation</h3>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-top-bar" width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#a905b6" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -171,7 +180,7 @@
                     <p>Elevation: 4,741 feet</p>
                 </section>
 
-                <section>
+                <section id="location">
                     <h3>Location</h3>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#a905b6" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -181,7 +190,7 @@
                     <p>Location: Mediterranean</p>
                 </section>
 
-                <section>
+                <section id="population">
                     <h3>Population</h3>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#a905b6" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -194,7 +203,7 @@
                 </section>
             </section>
 
-            <section>
+            <section id="contact">
                 <h2>Contact Us</h2>
                 <form>
                     <label for="first">First Name</label>
@@ -246,12 +255,10 @@
         </article>
     </main>
 
-    <footer>
-        <ul>
-            <li>&copy; 2021 Wunderlust</li>
-            <li><a href="#">Privacy Statement</a></li>
-            <li><a href="#">Terms of Service</a></li>
-        </ul>
+    <footer id="footer">
+        <p>&copy; 2021 Wunderlust</p>
+        <a href="#">Privacy Statement</a>
+        <a href="#">Terms of Service</a>
     </footer>
 </body>
 </html>
