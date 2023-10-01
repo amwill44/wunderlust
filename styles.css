@@ -1,7 +1,8 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -12,61 +13,78 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 
 /* main code */
 
+
 :root{
-	--yellow: #f6d64a;
-	--teal: #55bcd5;
+    --yellow: #f6d64a;
+    --teal: #55bcd5;
     --purple: #9b26b0;
-	--blue: #499bd2;
+    --blue: #499bd2;
     --dark-gray: #222222;
     --light-gray: #eaeaea;
-	--white: #ffffff;
-	--black: #000000;
-	font-family: 'Molle', 'Montserrat', san-serif;
+    --white: #ffffff;
+    --black: #000000;
+    font-family: 'Molle', 'Montserrat', san-serif;
 }
 
 body{
-    background-color: var(--white);
-    color: var(--black);
-    max-width: 480px;
-    margin: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
+.container {
+    max-width: 480px;
+    width: 100%;
+    margin: 25px;
+    background-color: var(--white);
+}
+#skip {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
 header {
     background: linear-gradient(to bottom, var(--teal), var(--white));
     display: grid;
@@ -82,19 +100,18 @@ header img {
     grid-area: logo;
     max-width: 85%;
     height: auto;
-    background: transparent;
 }
 header h1 {
     grid-area: title;
     font-size: 2.25rem;
     margin: 10px 30px;
-    font-family: 'Molle', 'Montserrat', sans-serif;   
+    font-family: 'Molle', 'Montserrat', sans-serif;  
 }
 header p {
     grid-area: paragraph;
     font-size: 1.2rem;
     margin: 10px 30px;
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
     font-weight: 200;
     line-height: 1.5em;
 }
@@ -128,16 +145,16 @@ label[for="toggle"]:hover {
 #menu {
     list-style: none;
     padding: 0;
-    display: none; 
+    display: none;
     position: absolute;
     right: 0;
-    background-color: var(--teal); 
+    background-color: var(--teal);
     border: 1px solid var(--black);
     border-top: none;
     box-sizing: border-box;
 }
 #toggle:checked + label + #menu {
-    display: block; 
+    display: block;
 }
 #toggle:checked + label {
     background-color: var(--black);
@@ -146,14 +163,14 @@ label[for="toggle"]:hover {
 #menu li {
     margin: 0;
     padding: 0;
-    border-top: 1px solid var(--black); 
+    border-top: 1px solid var(--black);
 }
 #menu a {
     color: var(--black);
     text-decoration: none;
-    padding: 20px 23px; 
-    text-align: center; 
-    display: block; 
+    padding: 20px 23px;
+    text-align: center;
+    display: block;
     transition: background-color 0.3s ease;
 }
 #menu a:hover {
@@ -173,15 +190,26 @@ label[for="toggle"]:hover {
 }
 #img-grid img {
     margin-bottom: 15px;
-    width: 480px;
+    width: 100%;
     height: auto;
 }
+/* 
+#cove-container {
+    width: 600px;
+    height: 600px;
+    overflow: hidden;
+}
+#cove {
+    width: 100;
+    height: 100;
+}
+*/
 #plan {
     background: var(--yellow);
     padding-bottom: 20px;
 }
 #plan h2 {
-    margin: 10px 30px; 
+    margin: 10px 30px;
     font-size: 2rem;
     padding: 20px 0;
 }
@@ -207,7 +235,7 @@ label[for="toggle"]:hover {
     stroke: var(--white)
 }
 .icon-tabler-plane {
-    transform: rotate(215deg); 
+    transform: rotate(215deg);
     margin-left: 15px;
     margin-bottom: 15px;
     width: 200px;
@@ -230,12 +258,12 @@ label[for="toggle"]:hover {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     text-transform: uppercase;
-    font-weight: bold; 
+    font-weight: bold;
 }
 .icon-tabler-bed {
     stroke: var(--white)
 }
-.icon-tabler-bed { 
+.icon-tabler-bed {
     margin-left: 15px;
     margin-bottom: 15px;
     width: 200px;
@@ -258,12 +286,12 @@ label[for="toggle"]:hover {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     text-transform: uppercase;
-    font-weight: bold; 
+    font-weight: bold;
 }
 .icon-tabler-sailboat {
     stroke: var(--white)
 }
-.icon-tabler-sailboat { 
+.icon-tabler-sailboat {
     margin-left: 15px;
     margin-bottom: 15px;
     width: 200px;
@@ -286,12 +314,12 @@ label[for="toggle"]:hover {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     text-transform: uppercase;
-    font-weight: bold; 
+    font-weight: bold;
 }
 .icon-tabler-tools-kitchen-2 {
     stroke: var(--white)
 }
-.icon-tabler-tools-kitchen-2 { 
+.icon-tabler-tools-kitchen-2 {
     margin-left: 15px;
     margin-bottom: 15px;
     width: 200px;
@@ -301,7 +329,7 @@ label[for="toggle"]:hover {
     text-align: center;
 }
 #testimonials h2 {
-    margin: 10px 30px; 
+    margin: 10px 30px;
     font-size: 2rem;
     padding: 20px 0;
 }
@@ -328,10 +356,10 @@ label[for="toggle"]:hover {
     line-height: 1em;
 }
 #testimonials q::before {
-    content: "“"; 
+    content: "“";
 }
 #testimonials q::after {
-    content: "”"; 
+    content: "”";
 }
 #about {
     background-color: var(--blue);
@@ -368,5 +396,107 @@ label[for="toggle"]:hover {
 #about svg {
     padding: 0 60px;
 }
+#contact h2 {
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    padding-top: 20px;
+}
+form input[type="text"], form input[type="email"], form input[type="tel"], form select {
+    border: 3px solid var(--purple);
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 85%;
+}
+form input {
+    margin-bottom: 20px;
+}
+form select {
+    width: 90% !important;
+}
+form input[type="radio"] {
+    margin-right: 5px;
+    margin-left: 35px;
+   
+}
+form input[type="submit"] {
+    background-color: var(--purple);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 90%;
+    margin: 15px 0;
+    margin-left: 25px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 35px;
+}
+fieldset legend {
+    color: var(--black);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    margin-left: 35px;
+}
+fieldset label {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    float: left;
+}
+fieldset input[type="radio"] {
+    float: left;
+}
+span.required {
+    color: var(--purple);
+    font-size: 1.2em;
+}
+footer {
+    background-color: var(--light-gray);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+footer p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .75em;
+    margin-bottom: 15px;
+}
+footer a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .75em;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--black);
+}
+
+@media (min-width: 768px) {
+    .container {
+        /* Adjust styles for larger screens */
+    }
+}
+
+/* Media query for even larger screens */
+@media (min-width: 1024px) {
+    .container {
+        /* Adjust styles for even larger screens */
+    }
+}
+
+
 
 
