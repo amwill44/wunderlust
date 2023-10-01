@@ -486,7 +486,33 @@ footer a {
 
 @media (min-width: 768px) {
     .container {
-        /* Adjust styles for larger screens */
+       header {
+            grid-template-columns: 1fr auto; 
+            grid-template-areas: "logo title" "menu menu"; 
+            gap: 0;
+        }
+        
+          header img {
+          max-width: 100%; 
+        }
+        header h1,
+        header p {
+            margin: 10px 0; 
+            text-align: left; 
+        }
+
+        nav {
+            text-align: left; 
+         }
+         #menu {
+            display: grid;
+            grid-template-rows: repeat(4, auto);
+            gap: 10px;
+         }
+         #menu a {
+            padding: 10px 20px;
+         }
+
     }
 }
 
