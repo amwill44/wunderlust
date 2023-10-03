@@ -198,6 +198,7 @@ body {
         width: 350px;
         height: auto;
         margin: 0 auto; 
+        margin-bottom: 5px;
         background-color: var(--teal);
         border: 3px solid var(--white);
         border-radius: 5px;
@@ -492,10 +493,11 @@ body {
     }
     #plan {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: "planh2 planh2" "lefttop righttop" 
         "leftbottom rightbottom";
         gap: 10px;
+        margin-top: 15px;
     }
     #plan h2{
         grid-area: planh2;
@@ -511,6 +513,10 @@ body {
     }
     #where {
         grid-area: rightbottom;
+    }
+    #testimonials section {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
     }
     
 }
