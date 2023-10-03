@@ -64,17 +64,121 @@ table {
     font-family: 'Molle', 'Montserrat', san-serif;
 }
 
-body{
-
+body {
+    max-width: 1200px;
+    margin: auto;
+    overflow-x: hidden;
 }
-#skip {
-    position: absolute;
-    left: -9999px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-  }
+@media (min-width: 400px) {
+    #skip {
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+    header {
+        background: linear-gradient(to bottom, var(--teal), var(--white));
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas: "logo menu" "title title" "paragraph paragraph";
+        gap: 10px;
+        align-items: center;
+    }
+    header a{
+        text-decoration: none;
+    }
+    header img {
+        grid-area: logo;
+        max-width: 85%;
+        height: auto;
+    }
+    header h1 {
+        grid-area: title;
+        font-size: 2.25rem;
+        margin: 10px 30px;
+        font-family: 'Molle', 'Montserrat', sans-serif;  
+    }
+    header p {
+        grid-area: paragraph;
+        font-size: 1.2rem;
+        margin: 10px 30px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 200;
+        line-height: 1.5em;
+    }
+    nav {
+        grid-area: menu;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .sr-only {
+        display: none;
+    }
+    #menu-toggle {
+        position: relative;
+        z-index: 999;
+    }
+    #toggle {
+        display: none;
+    }
+    label[for="toggle"] {
+        cursor: pointer;
+        padding: 20px 55px;
+        background-color: var(--yellow);
+        border-color: var(--black);
+        font-size: 1.2rem;
+        transition: background-color 0.3s ease;
+    }
+    label[for="toggle"]:hover {
+        background-color: var(--teal);
+    }
+    #menu {
+        list-style: none;
+        padding: 0;
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: var(--teal);
+        border: 1px solid var(--black);
+        border-top: none;
+        box-sizing: border-box;
+    }
+    #toggle:checked + label + #menu {
+        display: block;
+    }
+    #toggle:checked + label {
+        background-color: var(--black);
+        color: var(--white);
+    }
+    #menu li {
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid var(--black);
+    }
+    #menu a {
+        color: var(--black);
+        text-decoration: none;
+        padding: 20px 23px;
+        text-align: center;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+    #menu a:hover {
+        background-color: var(--teal);
+    }
+}
+
+@media (min-width: 768px) {
+    
+}
+
+
+@media (min-width: 1024px) {
+    
+}
 
 
 
