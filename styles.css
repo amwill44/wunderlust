@@ -194,7 +194,7 @@ body {
         font-size: 2rem;
         padding: 20px 0;
     }
-    #how {
+    #how, #places, #things, #where{
         width: 350px;
         height: auto;
         margin: 0 auto; 
@@ -204,7 +204,7 @@ body {
         text-align: center;
         padding-left: 15px;
     }
-    #how h3 {
+    #how h3, #places h3, #things h3, #where h3 {
         padding: 15px 0 0 0;
         font-size: 1.5rem;
         font-family: 'Montserrat', sans-serif;
@@ -215,88 +215,10 @@ body {
     .icon-tabler-plane path:nth-child(2) {
         stroke: var(--white)
     }
-    .icon-tabler-plane {
-        margin-left: 15px;
-        margin-bottom: 15px;
-        width: 200px;
-        height: 200px;
-    }
-    #places {
-        width: 350px;
-        height: auto;
-        margin: 15px auto; 
-        background-color: var(--teal);
-        border: 3px solid var(--white);
-        border-radius: 5px;
-        text-align: center;
-        padding-left: 15px;
-    }
-    #places h3 {
-        padding: 15px 0 0 0;
-        font-size: 1.5rem;
-        font-family: 'Montserrat', sans-serif;
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: bold;
-    }
-    .icon-tabler-bed {
+    .icon-tabler-bed,  .icon-tabler-sailboat, .icon-tabler-tools-kitchen-2 {
         stroke: var(--white)
     }
-    .icon-tabler-bed {
-        margin-left: 15px;
-        margin-bottom: 15px;
-        width: 200px;
-        height: 200px;
-    }
-    #things {
-        width: 350px;
-        height: auto;
-        margin: 15px auto; 
-        background-color: var(--teal);
-        border: 3px solid var(--white);
-        border-radius: 5px;
-        text-align: center;
-        padding-left: 15px;
-    }
-    #things h3 {
-        padding: 15px 0 0 0;
-        font-size: 1.5rem;
-        font-family: 'Montserrat', sans-serif;
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: bold;
-    }
-    .icon-tabler-sailboat {
-        stroke: var(--white)
-    }
-    .icon-tabler-sailboat {
-        margin-left: 15px;
-        margin-bottom: 15px;
-        width: 200px;
-        height: 200px;
-    }
-    #where {
-        width: 350px;
-        height: auto;
-        margin: 15px auto;
-        background-color: var(--teal);
-        border: 3px solid var(--white);
-        border-radius: 5px;
-        text-align: center;
-        padding-left: 15px;
-    }
-    #where h3 {
-        padding: 15px 0 0 0;
-        font-size: 1.5rem;
-        font-family: 'Montserrat', sans-serif;
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: bold;
-    }
-    .icon-tabler-tools-kitchen-2 {
-        stroke: var(--white)
-    }
-    .icon-tabler-tools-kitchen-2 {
+    .icon-tabler-bed, .icon-tabler-sailboat, .icon-tabler-tools-kitchen-2, .icon-tabler-plane  {
         margin-left: 15px;
         margin-bottom: 15px;
         width: 200px;
@@ -358,7 +280,7 @@ body {
     }
     #about h3 {
         padding: 0 60px;
-        margin-top: 10px 0;
+        margin: 10px 0;
         font-size: 1rem;
         font-family: 'Montserrat', sans-serif;
         text-transform: uppercase;
@@ -636,7 +558,7 @@ body {
         padding: 0;
         border: none;
         width: auto;
-        background-color: none;
+        background-color: transparent;
     }
     #menu a {
         background-color: var(--white);
