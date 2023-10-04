@@ -304,64 +304,89 @@ body {
         font-size: 2rem;
         padding-top: 20px;
     }
+    #contact {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column; 
+        padding: 20px; 
+    }
+    form {
+        width: 100%;
+        text-align: left; 
+    }
     form input[type="text"], form input[type="email"], form input[type="tel"], form select {
         border: 3px solid var(--purple);
-        display: block;
-        margin: 0 auto;
         margin-bottom: 10px;
         padding: 15px;
-        width: 85%;
+        width: 100%;
     }
-    form input {
-        margin-bottom: 20px;
+    label,fieldset legend {
+        font-family: 'Montserrat', sans-serif;
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
     }
-    form select {
-        width: 90% !important;
+    input[type="text"], input[type="email"], input[type="tel"] {
+        box-sizing: border-box;
     }
-    form input[type="radio"] {
-        margin-right: 5px;
-        margin-left: 35px;
-       
-    }
-    form input[type="submit"] {
+    input[type="submit"] {
         background-color: var(--purple);
-        color: var(--white);
-        border: none;
+        color: white;
         padding: 10px 20px;
         cursor: pointer;
-        width: 90%;
-        margin: 15px 0;
-        margin-left: 25px;
-    }
-    label {
-        display: block;
-        margin-bottom: 5px;
-        color: var(--black);
-        font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
         font-weight: bold;
-        margin-left: 35px;
-    }
-    fieldset legend {
-        color: var(--black);
-        font-weight: bold;
-        font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
-        margin-bottom: 15px;
-        margin-left: 35px;
+        border: none;
+        width: 100%;
     }
     fieldset label {
+        margin-bottom: 10px;
         font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
-        font-weight: lighter;
-        float: left;
+        font-size: .75rem;
+    }
+    fieldset {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "seth2 seth2" "radioinput radiolabel";
+    }
+    fieldset h2 {
+        grid-area: seth2;
+    }
+    .radio-label {
+        grid-area: radiolabel;
+        margin-right: 150px;
+    }
+    .radio-input {
+        grid-area: radioinput;
     }
     fieldset input[type="radio"] {
-        float: left;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 40px; 
+        height: 40px; 
+        border-radius: 50%;
+        border: 2px solid var(--purple);  
+        margin-left: 10px;
+        outline: none;
+        cursor: pointer;
+    }
+    fieldset input[type="radio"]:checked {
+        background-color: var(--purple);
+        border-color: var(--purple); 
+    }
+    .required {
+        color: var(--purple);
+        margin-left: 5px;
     }
     span.required {
         color: var(--purple);
         font-size: 1.2em;
+    }
+    .form-required {
+        font-size: .5em;
+        font-family: 'Montserrat', sans-serif;
     }
     footer {
         background-color: var(--light-gray);
@@ -514,9 +539,36 @@ body {
     #where {
         grid-area: rightbottom;
     }
-    #testimonials section {
+    #testimonials {
         display: grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "testh2 testh2" "testsec1 testsec2"; 
+        grid-gap: 20px;
+    }
+    #testimonials h2 {
+        grid-area: testh2;
+    }
+    
+    #testimonials section:nth-child(1) {
+        grid-area: testsec2; 
+    }
+    
+    #testimonials section:nth-child(2) {
+        grid-area: testsec1; 
+    }
+    #about {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+    }
+    
+    #about h2 {
+        grid-column: 1 / span 4; 
+    }
+    
+    .row {
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
     
 }
